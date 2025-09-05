@@ -14,6 +14,10 @@ import home_section5_1 from "./assets/images/home-section5-1.png";
 import home_section5_2 from "./assets/images/home-section5-2.png";
 import home_section5_3 from "./assets/images/home-section5-3.png";
 import home_section5_4 from "./assets/images/home-section5-4.png";
+import ig from "./assets/images/ic_social_ig.png";
+import fb from "./assets/images/ic_social_fb.png";
+import line from "./assets/images/ic_social_line.png";
+
 function App() {
   return (
     <>
@@ -223,9 +227,7 @@ function App() {
                 <img src={home_section5_4} alt="" />
                 <div className="py-4 px-4 h-[205px] flex flex-col">
                   <p className="mb-2 font-medium">Kyuan</p>
-                  <p className="">
-                    服務很好，品質沒有任何問題，非常喜歡。
-                  </p>
+                  <p className="">服務很好，品質沒有任何問題，非常喜歡。</p>
                   <p className="text-gray-400 mt-auto">2020/10/31</p>
                 </div>
               </div>
@@ -233,12 +235,150 @@ function App() {
           </ul>
         </div>
       </section>
-      <section>
-        <div className="container">
-          <h2>聯絡我們</h2>
-          <p></p>
+      <section className="py-10">
+        <div className="container md:w-5/6 lg:w-1/2">
+          <h2 className="text-2xl text-maroon-dark text-center font-bold mb-6">
+            聯絡我們
+          </h2>
+          <p className="mb-6">
+            我們相當重視您的意見，若您有任何疑問，可先參考「常見問題」，若仍有任何問題，請填妥以下資料，我們會在近期與您聯繫。
+          </p>
+          <form className="flex flex-col " onSubmit={() => {}}>
+            <label htmlFor="name" className="block mb-2 ">
+              姓名
+            </label>
+            <input
+              className="border block w-full mb-[22px] py-[6px] px-3"
+              id="name"
+              name="name"
+              required
+              type="text"
+              placeholder="陳小明"
+            />
+            <label htmlFor="phone" className="mb-2">
+              聯絡電話
+            </label>
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              placeholder="0912-345-678"
+              className="block border w-full mb-[22px] py-[6px] px-3"
+            />
+            <label htmlFor="email" className="mb-2">
+              電子郵件
+            </label>
+            <input
+              id="email"
+              name="email"
+              required
+              type="email"
+              placeholder="example@email.com"
+              className="block border w-full mb-[22px] py-[6px] px-3"
+            />
+            <label htmlFor="feedback" className="mb-2">
+              意見反應
+            </label>
+            <textarea
+              id="feedback"
+              name="feedback"
+              rows="4"
+              placeholder="請輸入您的意見"
+              className="block border w-full mb-[22px] py-[6px] px-3"
+            />
+            <div className="mb-6 flex items-start ">
+              <input
+                id="privacy-policy"
+                name="privacy-policy"
+                required
+                type="checkbox"
+                className="mt-1 mr-2 "
+              />
+              <label htmlFor="privacy-policy">
+                我同意隱私權政策，並同意依隱私權政策中所述的方式處理自己的資料
+              </label>
+            </div>
+            <button
+              type="submit"
+              className="bg-maroon-Default py-4 px-34 text-white"
+            >
+              確認送出
+            </button>
+          </form>
         </div>
       </section>
+      <footer className="bg-maroon-Default text-white py-6 px-4">
+        <div className="flex items-start justify-between">
+          <div className="flex flex-col ">
+            <ul className="hidden  md:flex md:items-end md:gap-12 md:mt-2 md:mb-7.5">
+              <li>
+                <a href="" className="py-4">
+                  首頁
+                </a>
+              </li>
+              <li>
+                <a href="" className="py-4">
+                  系列鏡框
+                </a>
+              </li>
+              <li>
+                <a href="" className="py-4">
+                  門市據點
+                </a>
+              </li>
+              <li>
+                <a href="" className="py-4">
+                  部落格
+                </a>
+              </li>
+              <li>
+                <a href="" className="py-4">
+                  常見問題
+                </a>
+              </li>
+            </ul>
+            <div className="flex gap-2.5 mb-2">
+              <span className="material-symbols-outlined">phone_in_talk</span>
+              <p>0800-000-000</p>
+            </div>
+            <div className="flex gap-2.5">
+              <span className="material-symbols-outlined">mail</span>
+              <p>glasses@business.com</p>
+            </div>
+          </div>
+          <div className="flex gap-2 md:gap-4 lg:gap-8">
+            <img
+              width={24}
+              height={24}
+              className="object-contain md:w-10 md:h-10"
+              src={fb}
+              alt=""
+            />
+            <img
+              width={24}
+              height={24}
+              className="object-contain md:w-10 md:h-10"
+              src={ig}
+              alt=""
+            />
+            <img
+              width={24}
+              height={24}
+              className="object-contain md:w-10 md:h-10"
+              src={line}
+              alt=""
+            />
+          </div>
+        </div>
+        <hr className="mt-6 mb-4" />
+        <div className="flex flex-col gap-2 md:flex-row justify-between">
+          <p>Copyright © 2020 Glasses.All rights reserved.</p>
+          <div className="flex flex-col md:flex-row md:gap-12" >
+            <p>隱私權政策</p>
+            <p>服務條款</p>
+          </div>
+        </div>
+      </footer>
     </>
   );
 }
