@@ -6,8 +6,11 @@
   --color-maroon-light: #fbfbf2;
   --color-maroon-Default: #aa0601;
   --color-maroon-dark: #650300;
-  --color-gray-10:#707070;
-  --color-gray-20:#DEE2E6;
+  --color-gray-10: #707070;
+  --color-gray-20: #dee2e6;
+  --color-gray-30: #dcdcdc;
+  --color-brown-10: #5f3e2d;
+  --color-brown-20: #b75929;
 }
 @utility container {
   padding-inline: 12px;
@@ -15,6 +18,6 @@
 }
 @layer base {
   html {
-    font-family: "Roboto", "Noto Sans TC", system-ui, sans-serif; 
+    font-family: "Roboto", "Noto Sans TC", system-ui, sans-serif;
   }
 }
